@@ -3,15 +3,20 @@ package spring.study.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import spring.study.domain.Member;
 import spring.study.repository.MemberRepository;
 import spring.study.repository.MemoryMemberRepository;
 
+//@Service // ❔ 스프링이 순수한 JAVA코드를 읽지 않기대문에 annotation을 달아줌?
 public class MemberService {
     private final MemberRepository memberRepository;
 
     // ⭐ MemberRepository를 외부에서 넣어주도록 바꿔준다.
     // ⭐⭐ Dependency Injection : 의존성 주입, Unit Test를 용이하게해주고 코드의 재활용성을 높여줌
+    // @Autowired // MemberRepository(인터페이스)의 구현체인 MemoryMemberRepository와 연결
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
