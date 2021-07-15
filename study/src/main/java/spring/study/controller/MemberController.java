@@ -2,7 +2,10 @@ package spring.study.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
+import spring.study.domain.Member;
 import spring.study.service.MemberService;
 
 //⭐스프링 빈(Bean)을 등록하는 2가지 방법
@@ -30,5 +33,20 @@ public class MemberController {
     @Autowired // membercontroller가 생성이 될 때 SpringBean에 등록되어있는 Service객체를 연결해줌
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+    }
+
+    @GetMapping("/members/new")
+    public String createForm() {
+        return "members/createMemberForm";
+    }
+
+    @PostMapping("/members/new")
+    public String create(MemberForm form) {
+        Member member = new Member();
+        member.setName(form.getName());
+
+        memberService.join(member);
+
+        return "redirect:/";
     }
 }
