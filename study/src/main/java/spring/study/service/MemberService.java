@@ -3,6 +3,8 @@ package spring.study.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ import spring.study.repository.MemberRepository;
 import spring.study.repository.MemoryMemberRepository;
 
 //@Service // ❔ 스프링이 순수한 JAVA코드를 읽지 않기대문에 annotation을 달아줌?
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
