@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import spring.study.AOP.TimeTraceAop;
 import spring.study.repository.JdbcMemberRepository;
 import spring.study.repository.JdbcTemplateMemberRepository;
 import spring.study.repository.JpaMemberRepository;
@@ -63,5 +64,10 @@ public class SpringConfig {
     // // JPA 사용
     // // return new JpaMemberRepository(em);
 
+    // }
+
+    // @Bean
+    // public TimeTraceAop timeTraceAop() {
+    // return new TimeTraceAop();
     // }
 }

@@ -36,6 +36,9 @@ public class MemberService {
         // throw new IllegalStateException("이미 존재하는 회원입니다.");
         // });
 
+        // 🔴 권장하지 않음.. 수동 메소드 호출시간 측정
+        long start = System.currentTimeMillis();
+
         validateDuplicationMember(member);
         memberRepository.save(member);
         return member.getId();

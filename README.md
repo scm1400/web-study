@@ -21,6 +21,8 @@
 <br>
 <br>
 
+MVC : MVC패턴으로 템플릿을 가지고 결과물을 만들어서 웹브라우저로 내려줌
+API : 객체를 JSON모양으로 변환해서 웹브라우저로 내려줌
 
 JPA : sql 없이 객체를 바로 DB에 저장하는 기술?
 스프링 데이터 JPA : JPA를 스프링으로 감싼 기술
@@ -629,5 +631,9 @@ public class SpringConfig {
 
 </div>
 </details>
+<br>
 
 ---
+## AOP
+---
+모든 메소도의 호출 시간을 측정하고싶을 때
