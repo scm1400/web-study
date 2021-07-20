@@ -27,6 +27,97 @@ API : 객체를 JSON모양으로 변환해서 웹브라우저로 내려줌
 JPA : sql 없이 객체를 바로 DB에 저장하는 기술?
 스프링 데이터 JPA : JPA를 스프링으로 감싼 기술
 
+<br>
+
+---
+## MVC와 템플릿 엔진
+---
+
+<br>
+
+### 예제1. getMethod로 값을 받아 웹페이지에 표시하기
+`HelloController.java`
+```java
+@Controller
+public class HelloController {
+    @GetMapping("hello-mvc")
+    public String helloMvc(@RequestParam("name") String name, Model model) {
+        model.addAttribute("name", name);
+        
+        return "hello-template";
+    }
+}
+```
+- 동작설명
+  - ⚡ `@GetMapping("hello-mvc")` : http://localhost:8080/hello-mvc로 연결 할 때 동작<br>
+  - ⚡ `@RequestParam("name") String name` : http://localhost:8080/hello-mvc?name=[원하는 값], [원하는 값]에 해당하는 Value를 String name에 저장한다.<br>
+  - ⚡ `model.addAttribute("name", name)` : `model.addAtrribute(Key,Value)`의 구조로 Key값은 `"name"`, Value 값은 `RequestParam`으로 받은 `String name`의 값<br>
+  - ⚡ `return "hello-template"` : `hello-template.html` 파일에 model 객체를 넘긴다.
+
+<br>
+
+`hello-template.html`
+```html
+<!DOCTYPE HTML>
+<html xmlns="http://www.thymeleaf.org">
+    <body>
+        <p th:text="'hello. '+${name}"> 안녕하세요. 손님</p>
+    </body>
+</html>
+```
+ ⚡ `<p th:text="'hello. '+${name}">` 넘겨받은 `model` 객체에서 `key`값이 `name`인 `value`를 출력
+
+<br>
+
+### 예제2. API 방식
+#### 1. `@ResponseBody 문자 반환`
+```java
+@Controller
+public class HelloController {
+    @GetMapping("hello-string")
+    @ResponseBody 
+    public String helloString(@RequestParam("name") String name) {
+        return "hello " + name;
+    }
+}
+```
+⚡ `@RespnseBody`를 사용하면 ViewResolver를 사용하지 않음, 대신에 HTTP의 BODY에 문자 내용을 직접 반환<br> (HTML BODY TAG를 말하는 것이 아님) HTML 파일을 작성하지 않아도 됨. (HttpMessageConverter)
+
+<br>
+
+#### 2. JSON 방식구현, 요즘에는 XML보다 JSON 반환이 거의 기본
+```java
+
+public class HelloController {
+
+    //Hello 라는 객체 생성
+    static class Hello {
+        private String name;
+
+        // getter & setter : Property 방식이라고 부름
+        public String getName() {
+            return this.name;
+        }
+        public void setName(String name) {
+            this.name = name;
+        }
+
+    }
+
+    @GetMapping("hello-api")
+    @ResponseBody // Body에 내용을 출력하겠다(HttpMessageConverter)
+    public Hello helloApi(@RequestParam("name") String name) {
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello; // ❔ 객체를 리턴하면 HttpMessageConverter -> JsonConverter 동작함
+                      // ❔ 스프링에서는 Jackson2 라이브러리 사용
+    }
+}
+
+```
+
+<br>
+
 ---
 ## H2 DB [(설치)](https://www.h2database.com/html/main.html)
 ---
