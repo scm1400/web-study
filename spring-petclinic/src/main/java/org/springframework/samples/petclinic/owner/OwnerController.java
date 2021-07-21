@@ -45,9 +45,13 @@ class OwnerController {
 
 	private VisitRepository visits;
 
-	public OwnerController(OwnerRepository clinicService, VisitRepository visits) {
+	// 과제 2 PetRepository 주입하기
+	private final PetRepository pet;
+
+	public OwnerController(OwnerRepository clinicService, VisitRepository visits, PetRepository pet) {
 		this.owners = clinicService;
 		this.visits = visits;
+		this.pet = pet;
 	}
 
 	@InitBinder
