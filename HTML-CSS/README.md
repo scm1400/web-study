@@ -233,7 +233,7 @@
 <br>
 예시)<br><br>
  <video controls>
-	 <source src="assets/video/dance.mp4" type="video/mp4">
+	 <source src="https://youtu.be/-zOfTS1HQTc" type="video/mp4">
 </video>
 
 ```html
@@ -241,3 +241,181 @@
 	 <source src="assets/video/dance.mp4" type="video/mp4">
 </video>
 ```
+
+<br><hr><br>
+
+# 3. 입력양식 (Form)
+
+<br>
+
+## 3.1 `<form>` 태그
+<br>
+
+```html
+<form>
+    <!--다양한 input form이 들어감-->
+</form>
+```
+
+- form 태그와 함께 사용하는 속성은 매우 다양하지만, 그 중 `<action>`과 `<method>` 속성은 필수로 사용해야하는 중요한 속성이다.
+  - `<action>` 속성은 데이터를 보낼 URL을 지정한다.
+  - `<method>` 속성은 보내는 방식을 지정한다. (GET, POST)
+
+
+<br><hr><br>
+
+## 3.2 `<input>` 태그
+
+<br>
+
+- 주로 사용자에게 입력을 받기 위해 사용되며, 빈 태그 이기 때문에 종료 태그를 사용하지 않는다.
+- `type` 속성으로 어떤 값을 입력받을지 결정한다.
+- 입력 받은 데이터를 구분하기 위해 `name` 속성을 키(Key)로, 입력 받은 데이터를 값(value)로 전송한다.
+
+
+<br>
+예시
+
+```html
+text
+<input type="text" name="myname">
+
+email
+<input type="email" name="email">
+
+password
+<input type="password" name="pw">
+
+button
+<input type="button" value="Button">
+
+search
+<input type="search" name="search">
+
+checkbox
+<input type="checkbox" name="python" value="python" checked>Python<br>
+<input type="checkbox" name="javascript" value="javascript">Javascript<br>
+<input type="checkbox" name="cpp" value="cpp">C++<br>
+
+file
+<input type="file" name="myfile">
+
+radio
+<input type="radio" name="gender" value="male" checked> 남자<br>
+<input type="radio" name="gender" value="female"> 여자<br>
+
+color
+<input type="color" name="color">
+
+date
+<input type="date" name="birthday">
+
+number
+<input type="number" name="quantity" min="1" max="10" step="1" value="1">
+
+range
+<input type="range" name="points" min="0" max="10" step="1" value="5">
+
+reset
+<input type="reset">
+
+time
+<input type="time" name="mytime">
+```
+
+<h3>text</h3>
+<input type="text" name="myname">
+
+<h3>email</h3>
+<input type="email" name="email">
+
+<h3>password</h3>
+<input type="password" name="pw">
+
+<h3>button</h3>
+<input type="button" value="Button">
+
+<h3>search</h3>
+<input type="search" name="search">
+
+<h3>checkbox</h3>
+<input type="checkbox" name="python" value="python" checked>Python<br>
+<input type="checkbox" name="javascript" value="javascript">Javascript<br>
+<input type="checkbox" name="cpp" value="cpp">C++<br>
+
+<h3>file</h3>
+<input type="file" name="myfile">
+
+<h3>radio</h3>
+<input type="radio" name="gender" value="male" checked> 남자<br>
+<input type="radio" name="gender" value="female"> 여자<br>
+
+<h3>color</h3>
+<input type="color" name="color">
+
+<h3>date</h3>
+<input type="date" name="birthday">
+
+<h3>number</h3>
+<input type="number" name="quantity" min="1" max="10" step="1" value="1">
+
+<h3>range</h3>
+<input type="range" name="points" min="0" max="10" step="1" value="5">
+
+<h3>reset</h3>
+<input type="reset">
+
+<h3>time</h3>
+<input type="time" name="mytime">
+
+<br><br>
+
+- `placeholder` 속성을 사용해 입력창에 '아이디를 입력하세요'와 같은 가이드 문구를 지정할 수 있다.
+```html
+회원가입
+<form action="my-app" method="get">
+	<input type="text" name="id" placeholder="아이디를 입력하세요.">
+</form>
+```
+<h3>회원가입</h3>
+<form action="my-app" method="get">
+	<input type="text" name="id" placeholder="아이디를 입력하세요.">
+</form>
+
+<br><br>
+
+- `<label>` 태그는 입력 양식의 역할이 무엇인지 알려주는 이름표의 역할을 한다.
+- `<label>` 태그의 `for` 속성과 `<input>` 태그의 `id` 속성을 한 세트로 본다.
+- `for` 속성의 값으로 `id` 속성 값을 입련한다.
+
+```html
+<label for="target">아이디: </label>
+<input type="text" id="target">
+```
+`<label>` 태그에 해당하는 이름표를 클릭하면 입력칸이 활성화되는 것을 볼 수 있다.<br> 
+-> <label for="target">아이디: </label>
+<input type="text" id="target">
+
+<br><hr><br>
+
+## 3.3 `<select>` 태그
+<br>
+
+- `<select>` 태그를 사용해서 **선택박스(Select Box)** 를 만들 수 있다.
+- `<select>` 태그는 `<option>` 태그로 이루어져 있는 각 선택지를 하나로 감싸는 역할을 수행한다.
+
+<br>
+예시)
+
+```html
+<select name="job" id="job">
+	<option value="student">학생</option>
+	<option value="teacher">선생님</option>
+	<option value="etc">기타</option>
+</select>
+```
+<select name="job" id="job">
+	<option value="student">학생</option>
+	<option value="teacher">선생님</option>
+	<option value="etc">기타</option>
+</select>
