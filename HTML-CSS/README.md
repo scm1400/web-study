@@ -419,3 +419,365 @@ time
 	<option value="teacher">선생님</option>
 	<option value="etc">기타</option>
 </select>
+
+<br><hr><br>
+
+## 3.4 `<textarea>` 태그
+
+<br>
+
+- `<textarea>` 태그는 한 번에 많은 양의 글을 입력 받을 때 사용한다.
+<br>
+예시)
+
+```html
+<form>
+	<div>
+		<label for="introduce">자기소개: </label>
+		<textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
+	</div>
+</form>
+
+```
+<form>
+	<div>
+		<label for="introduce">자기소개: </label>
+		<textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6"></textarea>
+	</div>
+</form>
+
+<br><br>
+
+- `cols`속성과 `rows` 속성으로 글 입력 크기를 조절 할 수 있다.
+
+예시)
+
+```html
+	<label for="introduce">자기소개: </label>
+	<textarea name="introduce" id="introduce" placeholder="자기소개를 입력하세요" cols="20" rows="6">
+
+    </textarea>
+```
+
+<br><hr><br>
+
+## 3.5 `<button>` 태그
+
+<br>
+
+- `<button>` 태그는 HTML 요소를 태그 내부에 담아 사용 할 수 있다는 장점이 있다.
+- 덕분에 이미지 버튼의 제작도 가능하다.
+
+예시)
+```html
+<form action="my-app" method="get">
+	<div>
+		<label for="userid">아이디: </label>
+		<input type="text" id="userid" name="id" placeholder="아이디를 입력하세요.">
+	</div>
+	<div>
+		<label for="password">비밀번호: </label>
+		<input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요.">
+	</div>
+	<button type="submit">제출</button>
+</form>	
+```
+
+<form action="my-app" method="get">
+	<div>
+		<label for="userid">아이디: </label>
+		<input type="text" id="userid" name="id" placeholder="아이디를 입력하세요.">
+	</div>
+	<div>
+		<label for="password">비밀번호: </label>
+		<input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요.">
+	</div>
+	<button type="submit">제출</button>
+</form>	
+
+<br>
+
+- `type="reset"`도 사용할 수 있는데, 이는 입력 양식을 모두 초기화하는 역할을 수행한다.
+
+예시)
+```html
+<form action="my-app" method="get">
+	<div>
+		<label for="userid">아이디: </label>
+		<input type="text" id="userid" name="id" value="id1400">
+	</div>
+	<div>
+		<label for="password">비밀번호: </label>
+		<input type="password" id="password" name="password" value="132456">
+	</div>
+	<input type="reset">
+</form>	
+```
+
+<form action="my-app" method="get">
+	<div>
+		<label for="userid">아이디: </label>
+		<input type="text" id="userid" name="id" value="">
+	</div>
+	<div>
+		<label for="password">비밀번호: </label>
+		<input type="password" id="password" name="password" value="">
+	</div>
+	<input type="reset">
+</form>	
+
+<br><hr><br>
+
+# 4. 테이블과 리스트
+<br>
+
+## 4.1 `<table>` 태그
+<br>
+
+- `<table>` 태그를 이용해 HTML 문서에서 표를 만들 수 있다.
+
+예시)
+```html
+<table> <!--전체를 담고 있는 표-->
+	<tr> <!--각 행-->
+		<th>나이</th> <!--각 열의 제목을 담은 제목 셀-->
+		<th>직업</th>
+		<th>이름</th>
+	</tr>
+	<tr>
+		<td>23</td> <!--데이터를 담은 데이터 셀-->
+		<td>대학생</td>
+		<td>김구름</td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>직장인</td>
+		<td>구우름</td>
+	</tr>
+</table>
+```
+<table> <!--전체를 담고 있는 표-->
+	<tr> <!--각 행-->
+		<th>나이</th> <!--각 열의 제목을 담은 제목 셀-->
+		<th>직업</th>
+		<th>이름</th>
+	</tr>
+	<tr>
+		<td>23</td> <!--데이터를 담은 데이터 셀-->
+		<td>대학생</td>
+		<td>김구름</td>
+	</tr>
+	<tr>
+		<td>24</td>
+		<td>직장인</td>
+		<td>구우름</td>
+	</tr>
+</table>
+
+<br>
+
+- `<th>`, `<td>`, `<tr>` 은 각각 table Heading, Data, Raw의 줄임말이다.
+- 표제목을 열이 아니라 행에 놓고 싶다면 다음과 같이 사용할 수 있다.
+
+예시)
+```html
+<!-- 표제목을 행에 넣는 코드 -->
+<table>
+	<tr>
+		<th>나이</th>
+		<td>23</td>
+		<td>24</td>
+	</tr>
+	<tr>
+		<th>직업</th>
+		<td>대학생</td>
+		<td>직장인</td>
+	</tr>
+	<tr>
+		<th>이름</th>
+		<td>김구름</td>
+		<td>구우름</td>
+	</tr>
+</table>
+```
+<table>
+	<tr>
+		<th>나이</th>
+		<td>23</td>
+		<td>24</td>
+	</tr>
+	<tr>
+		<th>직업</th>
+		<td>대학생</td>
+		<td>직장인</td>
+	</tr>
+	<tr>
+		<th>이름</th>
+		<td>김구름</td>
+		<td>구우름</td>
+	</tr>
+</table>
+
+<br><br>
+
+- `colsapn`과 `rowspan` 속성을 사용해서 여러칸을 한 칸처럼 사용할 수 있다. (셀병합)
+
+예시)
+```html
+<table>
+	<tr>
+		<th>나이</th>
+		<td>23</td>
+		<td>24</td>
+	</tr>
+	<tr>
+		<th>직업</th>
+		<td colspan="2">대학생이다람쥐</td>
+	</tr>
+	<tr>
+		<th>이름</th>
+		<td>김구름</td>
+		<td>구우름</td>
+	</tr>
+</table>
+```
+
+<table>
+	<tr>
+		<th>나이</th>
+		<td>23</td>
+		<td>24</td>
+	</tr>
+	<tr>
+		<th>직업</th>
+		<td colspan="2">대학생이다람쥐</td>
+	</tr>
+	<tr>
+		<th>이름</th>
+		<td>김구름</td>
+		<td>구우름</td>
+	</tr>
+</table>
+
+<br><hr><br>
+
+## 4.2 목록(List)
+
+<br>
+
+- 목록(List)은 **크게 순서 없는 목록(Unordered List)**과 **순서 있는 목록(Ordered List)**으로 나뉜다.
+- 순서 있는 목록은 다음과 같이 생겼다.
+
+```html
+<!-- ol 은 Ordered List의 약자 -->
+<ol>
+	<li>세제</li>
+	<li>돼지 고기 300g</li>
+	<li>생수</li>
+</ol>
+```
+
+<ol>
+	<li>세제</li>
+	<li>돼지 고기 300g</li>
+	<li>생수</li>
+</ol>
+
+- 순서 없는 목록은 다음과 같이 생겼다.
+
+```html
+<!-- ul은 Unordered List의 약자 -->
+<ul>
+	<li>학교 과제하기</li>
+	<li>Python 강의 듣기</li>
+</ul>
+```
+
+  <ul>
+	<li>학교 과제하기</li>
+	<li>Python 강의 듣기</li>
+</ul>
+
+<br>
+
+- `<ul>` 태그안에서 `<ol>` 태그를 사용할 수 있다.
+  
+예시)
+```html
+<ul>
+	<li>학교 과제하기
+		<ol>
+			<li>물리학 실험 보고서</li>
+			<li>확률과 통계 chapter.3 풀이</li>
+		</ol>
+	</li>
+	<li>Python 강의 듣기</li>
+</ul>
+<h3>장바구니</h3>
+<ol>
+	<li>세제</li>
+	<li>돼지 고기 300g</li>
+	<li>생수</li>
+</ol>
+```
+<ul>
+	<li>학교 과제하기
+		<ol>
+			<li>물리학 실험 보고서</li>
+			<li>확률과 통계 chapter.3 풀이</li>
+		</ol>
+	</li>
+	<li>Python 강의 듣기</li>
+</ul>
+
+<br>
+<br>
+
+- `<ol>` 태그는 순서가 있는 리스트이기 때문에 `start` 속성과  `type` 속성을 이용해서 숫자,문자 등의 순서리스트를 만들 수 있다.
+
+예시)
+```html
+<!-- -->
+<ol type="i">	
+	<li>ㅇㅇ</li>
+</ol>
+<ol type="I">	
+	<li>ㅇㅇ</li>
+</ol>
+<ol type="a">	
+	<li>ㅇㅇ</li>
+</ol>
+<ol type="A">	
+	<li>ㅇㅇ</li>
+</ol>
+```
+<ol type="i">	
+	<li>ㅇㅇ</li>
+</ol>
+<ol type="I">	
+	<li>ㅇㅇ</li>
+</ol>
+<ol type="a">	
+	<li>ㅇㅇ</li>
+</ol>
+<ol type="A">	
+	<li>ㅇㅇ</li>
+</ol>
+
+<br><br>
+
+- `<li>` 태그에 `value="숫자"` 속성을 넣어서 번호를 지정 할 수도 있다.
+
+예시)
+```html
+<ol>	
+	<li value="3">세제</li>
+	<li>돼지 고기 300g</li>
+	<li value="7">생수</li>
+</ol>
+```
+<ol>	
+	<li value="3">세제</li>
+	<li>돼지 고기 300g</li>
+	<li value="7">생수</li>
+</ol>
