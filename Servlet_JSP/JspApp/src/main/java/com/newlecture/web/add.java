@@ -10,23 +10,36 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet("/hello")
-public class Nana extends HttpServlet {
+@WebServlet("/add")
+public class add extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html; charset=UTF-8");
+		//req.setCharacterEncoding("UTF-8");
+		
 		PrintWriter out = resp.getWriter();
 		
-		String temp = req.getParameter("cnt");
+		String x_ = req.getParameter("x");
+		String y_ = req.getParameter("y");
 		
-		int cnt = 10;
-				
-		if(temp != null && !temp.equals(""))
-			cnt = Integer.parseInt(temp);
+		int x = 0;
+		int y = 0;
 		
-		for (int i = 0; i < cnt; i++) {
-			out.println((i+1)+"아아아아아아아<br >");
+		if(x_ != null && !x_.equals(""))
+		{
+			x = Integer.parseInt(req.getParameter("x"));
+
 		}
+		if(y_ != null && !y_.equals(""))
+		{
+			y = Integer.parseInt(req.getParameter("y"));
+		}
+
+		out.print(x+y);
+		
+		resp.getWriter().printf("result is %d\n", x+y);
+		
+		
 	}
 }

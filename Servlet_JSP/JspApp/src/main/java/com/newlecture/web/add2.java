@@ -10,23 +10,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet("/hello")
-public class Nana extends HttpServlet {
+@WebServlet("/add2")
+public class add2 extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html; charset=UTF-8");
+		//req.setCharacterEncoding("UTF-8");
+		
 		PrintWriter out = resp.getWriter();
 		
-		String temp = req.getParameter("cnt");
+		String[] num_ = req.getParameterValues("num");
 		
-		int cnt = 10;
-				
-		if(temp != null && !temp.equals(""))
-			cnt = Integer.parseInt(temp);
+		int result = 0;
 		
-		for (int i = 0; i < cnt; i++) {
-			out.println((i+1)+"아아아아아아아<br >");
+		for(String number : num_)
+		{
+			int num = Integer.parseInt(number);
+			result += num;
 		}
+		
+
+		out.print(result);
+		
+		
 	}
 }
