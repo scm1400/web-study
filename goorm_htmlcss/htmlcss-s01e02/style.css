@@ -1,0 +1,93 @@
+body, h1, h2, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: #111;
+    background-image: url(images/halloween-background.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background-image: url(images/halloween-bg.png);
+    color: white;
+    text-align: center;
+    height: 400px;
+}
+
+.profile {
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.name {
+    margin: 10px 0;
+    color: violet;
+}
+
+.description {
+    width: 400px;
+    margin: 10px auto;
+    color: #888;
+    background-color: rgba(0,0,0,0.9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contents {
+
+}
+
+.section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    color: #999;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    background-position: right 30px center;
+    background-repeat: no-repeat;
+}
+
+.section.information {
+    background-image: url(images/icon-information.png);
+}
+
+.section.skills {
+    background-image: url(images/icon-skills.png);
+}
+
+.section h2 {
+    color: orangered;
+    margin-bottom: 20px;
+}
+
+.section li {
+    border-left: 3px solid #ddd;
+    padding: 5px 10px;
+}
+
+.footer {
+    background-color: #111;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    color: violet;
+    padding: 20px 0;
+    text-align: center;
+}
+

@@ -1,0 +1,89 @@
+body, h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #ddd;
+    text-align: center;
+}
+
+
+.container {
+    display: inline-block;
+    background-color: white;
+    width: 300px;
+    vertical-align: bottom;
+    margin: 300px 10px 0;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0,0,0,0.05);
+}
+
+.container.red   { color: orangered; }
+.container.green { color: limegreen; }
+.container.blue  { color: dodgerblue; }
+
+
+.container h2 {
+    margin: 10px 0;
+    display: inline-block;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    font-size: 40px;
+    padding-top: 3px;
+    font-family: 'Anton', sans-serif;
+    font-weight: normal;
+    letter-spacing: 5px;
+    text-indent: 5px;
+}
+
+.container p {
+    color: #aaa;
+    margin: 10px;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+.container img {
+    display: block;
+    margin: -140px auto 0;
+    width: 150px;
+}
+
+.container-bottom {
+    background-color: #efefef;
+    padding: 20px 0;
+}
+
+.button {
+    background-color: limegreen;
+    color: white;
+    padding: 12px 30px 10px 30px;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    display: inline-block;
+    border-bottom: 5px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
+    vertical-align: bottom;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button.disabled {
+    pointer-events: none;
+    border-bottom: 5px solid rgba(0,0,0,0.1);
+    background-color: #ddd;
+}
+
+.button.cancel {
+    background-color: orangered;
+}
+
+.button:active {
+    margin-top: 5px;
+    border-bottom: 0;
+}

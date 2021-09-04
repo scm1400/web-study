@@ -1,0 +1,230 @@
+body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #efefef;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 150px auto;
+}
+
+.sidebar {
+    float: right;
+    background-color: white;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.contents {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.sidebar-point {
+    width: 100%;
+    margin-top: -100px;
+}
+
+.sidebar-title {
+    color: #92a5b7;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.sidebar-title h1 {
+    font-weight: normal;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #999;
+}
+
+.price:before {
+    content: '$';
+    margin-right: 0.2em;
+    opacity: 0.4;
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+.controls {
+    margin-bottom: 10px;
+}
+
+.button {
+    display: block;
+    background-color: #92a5b7;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-indent: 0.2em;
+    color: white;
+    margin: 0.3em 10px;
+    line-height: 1;
+    padding: 17px 0 15px 0;
+}
+
+.button.share {
+    background-color: #bbb;
+}
+
+
+.sidebar-footer {
+    color: #999;
+    font-size: 12px;
+    padding: 20px 0;
+}
+
+.section {
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h2 {
+    font-weight: normal;
+    color: #92a5b7;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.section p {
+    font-size: 14px;
+}
+
+.review {
+    margin-bottom: 10px;
+}
+
+.review:nth-child(odd) .review-icon {
+    float: right;
+}
+
+.review:nth-child(odd) .review-icon:after {
+    display: none;
+}
+
+.review:nth-child(odd) .review-icon {
+    border-color: antiquewhite;
+}
+
+.review:nth-child(odd) .review-icon img {
+    border-color: antiquewhite;
+}
+
+.review:nth-child(odd) .review-icon:before {
+    display: inline-block;
+    border-left-color: antiquewhite;
+}
+
+.review:nth-child(odd) .review-contents {
+    background-color: antiquewhite;
+}
+
+.review:last-child {
+    margin-bottom: 0;
+}
+
+.review-icon {
+    float: left;
+}
+
+.review-icon:before,
+.review-icon:after {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #efefef;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.review-icon:before {
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid #efefef; 
+    border-bottom: 10px solid transparent;
+    display: none;
+}
+
+.review-icon img {
+    border: 5px solid #ddd;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.review-contents {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #efefef;
+    padding: 20px;
+}
+
+.review-contents h3 {
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.review-contents p {
+    font-size: 10px;
+}
+
+.star {
+    display: inline-block;
+    background-image: url(images/star-sprite.png);
+    width: 150px;
+    height: 30px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.star:before {
+    content: ' ';
+    background-image: url(images/star-sprite.png);
+    display: block;
+    width: 150px;
+    background-position: left bottom;
+    height: 30px;
+}
+
+.star.s03:before {
+    width: 60%;
+}
+
+.pager {
+    text-align: center;
+}
+
+.pager .dot {
+    text-indent: -9999px;
+    display: inline-block;
+    background-color: #ddd;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s;
+    vertical-align: middle;
+}
+
+.pager .dot:hover {
+    background-color: #999;
+    width: 10px;
+    height: 10px;
+}
