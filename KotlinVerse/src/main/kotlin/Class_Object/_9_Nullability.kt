@@ -23,11 +23,11 @@ fun isLetterString(s: String): Boolean {
 fun isBooleanString(s: String?) = s == "false" || s == "true"
 
 fun main() {
-    isLetterString(null) // null을 넘기면 컴파일 오류가 발생한다.
+//    isLetterString(null) // null을 넘기면 컴파일 오류가 발생한다.
 
     val s: String? = "hi"
 
-    val ss: String = s // null이 될수 없는 타입에 값이 null이 아니더라도 null이 될 수 있는 타입을 대입할 수 없다.
+//    val ss: String = s // null이 될수 없는 타입에 값이 null이 아니더라도 null이 될 수 있는 타입을 대입할 수 없다.
 
     // Int와 Boolean 같은 원시 타입도 널이 될 수 있는 타입이 존재한다.
     // 하지만 원시 타입의 널이 될 수 있는 타입은 항상 박싱한 값만 표현한다.
