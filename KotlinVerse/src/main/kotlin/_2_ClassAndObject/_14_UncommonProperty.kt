@@ -1,6 +1,5 @@
-package Class_Object
+package _2_ClassAndObject
 
-import Class_Object.prefix // 최상위 프로퍼티를 임포트할 수도 있다.
 import java.io.File
 
 // ?최상위 프로퍼티는 Class에서는 사용 못하고 fun에서만 사용되는듯?

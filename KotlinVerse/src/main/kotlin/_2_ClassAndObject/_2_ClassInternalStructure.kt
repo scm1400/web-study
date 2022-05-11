@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // 프로퍼티가 사용하는 내부 필드는 항상 캡슐화돼 있고
 // 클래스 정의 밖에서는 이 내부 필드에 접근할 수 없다.

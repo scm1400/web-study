@@ -1,6 +1,4 @@
-package Class_Object
-
-import java.lang.IllegalArgumentException
+package _2_ClassAndObject
 
 // 자바의 new와 같은 키워드를 사용하지 않는
 // 클래스 헤더의 파라미터 목록을 주생성자(Primary Constructor) 선언이라 부른다.

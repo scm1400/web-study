@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // 내포된 클래스(Nested Class)
 // 코틀린 클래스는 다른 클래스도 멤버로 가질 수 있다.

@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // 일반적으로 널이 될 수 있는 값을 사용하려면 예외를 던지는 방식보다
 // 더 타당한 응답을 제공해야 하기 때문에 이 연산자를 사용하지 말아야 한다.

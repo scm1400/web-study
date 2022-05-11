@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // [ 객체 선언 ]
 // 코틀린에서는 클래스와 비슷한 방법으로 싱글톤을 선언한다.

@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 /**
  * public(공개): 멤버를 어디서나 볼 수 있다. 디폴트 가시성이다.

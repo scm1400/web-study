@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // null 복합 연산자인 '?:' 를 사용하면 null을 대신할 디퐅트 값을 지정할 수 있다.
 

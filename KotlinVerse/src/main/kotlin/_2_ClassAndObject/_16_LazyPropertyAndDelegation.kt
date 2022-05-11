@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 import java.io.File
 // [ 지연 계산 프로퍼티 ]

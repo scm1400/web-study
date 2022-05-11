@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // 이 함수는 콘솔을 표준 I/O로 사용하는 한 잘 작동한다.
 // 하지만 프로그램이 파일을 입력에 파이프로 연결하면, 파일이 비어있는 경우 KotlinNull PointerException이 발생시킬 수 있다.

@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // 참조 값에 아무것도 참조하지 않는 경우를 나타내는 값 null
 

@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // 널이 될 수 있는 값을 처리하는 직접정인 방법: 조건문을 사용해 null과 비교
 fun isLetterString2(s: String?): Boolean{

@@ -1,4 +1,4 @@
-package BasicGrammer
+package _1_BasicGrammer
 
 //import foo.readInt as fooReadInt
 //import bar.readInt as barReadInt // as를 이용해서 별명을 붙여줄 수 있다

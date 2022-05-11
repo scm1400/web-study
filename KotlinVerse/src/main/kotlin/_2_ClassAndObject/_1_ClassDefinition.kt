@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 // 코틀린에서는 소스 파일의 이름을 그 안에 들어있는 공개 클래스 이름과 똑같이 만들 필요가 없다.
 // 한 파일 안에 여러 공개 클래스를 넣을 수도 있다.

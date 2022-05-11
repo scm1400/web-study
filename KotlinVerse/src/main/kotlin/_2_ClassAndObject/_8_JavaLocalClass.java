@@ -1,4 +1,4 @@
-package Class_Object;
+package _2_ClassAndObject;
 
 import kotlin.jvm.internal.Ref.IntRef;
 

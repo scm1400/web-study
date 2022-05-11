@@ -1,4 +1,4 @@
-package Class_Object
+package _2_ClassAndObject
 
 fun main() {
 
