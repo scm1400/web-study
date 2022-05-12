@@ -10,7 +10,7 @@ fun sumArray(numbers: IntArray):Int{
 }
 // 위 함수에서 함수 자체의 기본적인 루프 로직은 그대로 두고 중간 값들을 함수 파라미터로 추출한 다음,
 // 일반화한 함수를 호출할 때 이 파라이머테 적당한 연산을 제공하여 아래와 같은 함수로 바꾸면 된다.
-fun aggregate(numbers: IntArray, op: (Int, Int) -> Int): Int {
+fun aggregate(numbers: IntArray, op: (resultSoFar: Int, nextValue: Int) -> Int): Int {
     var result = numbers.firstOrNull()
         ?: throw IllegalArgumentException("Empty array")
 
