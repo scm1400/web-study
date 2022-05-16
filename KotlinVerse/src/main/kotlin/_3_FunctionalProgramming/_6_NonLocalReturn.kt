@@ -11,6 +11,9 @@ inline fun inlineForEach(a: IntArray, action: (Int) -> Unit) {
     for (n in a) action(n)
 }
 
+// inline 키워드가 붙은 함수는 컴파일 타임에 코드가 변환되며,
+// lambda 함수가 호출되는게 아니라 직접 삽입되기 때문에 return을 만나게되면,
+// inline 함수를 호출하는 상위함수가 return 되며 실행이 종료된다.
 fun main() {
     // 고차 함수를 사용하면 return 문 등과 같이 일반적인 제어 흐름을 깨는 명령을 사용할 때 문제가 생긴다.
     forEach2(intArrayOf(1, 2, 3, 4)){
@@ -42,8 +45,13 @@ fun main() {
     }
 
     inlineForEach2(intArrayOf(1, 2, 3, 4)) {
-        if (it < 2 || it > 3) return // main에서 반환됨됨
-       println(it)
+        if (it < 2 || it > 3) return // run() 함수에서 반환됨
+        println(it)
+    }
+
+    inlineForEach3(intArrayOf(1, 2, 3, 4)) {
+        if (it < 2 || it > 3) //return => 에러
+        println(it)
     }
 
 }
@@ -63,7 +71,7 @@ inline fun inlineForEach2(a: IntArray, action: (Int) -> Unit) = object {
 }
 
 // 이런 호출을 허용하려면 파라미터 앞에 crossinline 변경자를 붙여야 한다.
-// 이 변경자는 인라인시키도록 남겨두는 대신 람다 안에서 비지역 return을 사용하지 못하게 막는 역할을 한다.
+// 이 변경자는 함숫값을 인라인시키도록 남겨두는 대신 람다 안에서 비지역 return을 사용하지 못하게 막는 역할을 한다.
 inline fun inlineForEach3(a: IntArray, crossinline action: (Int) -> Unit) = object {
     fun run() {
         for (n in a) {
